@@ -11,6 +11,11 @@
 <c:url value="/resources/css" var="cssPath" />
 <link rel="stylesheet" href="${cssPath}/bootstrap.min.css" />
 <link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
+<style>
+	body{
+		padding-left: 20px;
+		}
+</style>
 </head>
 <body>
 

@@ -32,11 +32,12 @@ import com.google.common.cache.CacheBuilder;
 import br.com.casadocodigo.loja.controllers.CarrinhoComprasController;
 import br.com.casadocodigo.loja.controllers.HomeController;
 import br.com.casadocodigo.loja.dao.ProdutoDAO;
+import br.com.casadocodigo.loja.dao.UsuarioDAO;
 import br.com.casadocodigo.loja.infra.FileSaver;
 import br.com.casadocodigo.loja.models.CarrinhoCompras;
 
 @EnableWebMvc//configura��o do projeto web usando SpringMVC
-@ComponentScan(basePackageClasses={HomeController.class, ProdutoDAO.class, FileSaver.class, CarrinhoCompras.class, CarrinhoComprasController.class})//configurar o caminho (pacote) 
+@ComponentScan(basePackageClasses={HomeController.class, ProdutoDAO.class,UsuarioDAO.class, FileSaver.class, CarrinhoCompras.class, CarrinhoComprasController.class})//configurar o caminho (pacote) 
 //onde o SpringMVC ir� encontrar os nossos controllers e os daos para gerenciar.
 @EnableCaching
 public class AppWebConfiguration extends WebMvcConfigurerAdapter{
