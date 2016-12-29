@@ -43,14 +43,14 @@ public class HomeController {
 	    binder.addValidators(new ProdutoValidation());
 	}
 	
-	@RequestMapping("/home")
-	@Cacheable(value="produtosHome")//Habilita o cache, ou seja, a busca ao BD ficara guardada até que haja uma nova adiçao de livro.
-    public ModelAndView index(){
-		List<Produtos> produtos = produtoDao.listar();
-        ModelAndView modelAndView = new ModelAndView("home");
-        modelAndView.addObject("produtos", produtos);
-        return modelAndView;
-    }
+//	@RequestMapping("/home")
+//	@Cacheable(value="produtosHome")//Habilita o cache, ou seja, a busca ao BD ficara guardada até que haja uma nova adiçao de livro.
+//    public ModelAndView index(){
+//		List<Produtos> produtos = produtoDao.listar();
+//        ModelAndView modelAndView = new ModelAndView("home");
+//        modelAndView.addObject("produtos", produtos);
+//        return modelAndView;
+//    }
 	
 	@RequestMapping("/form")
     public ModelAndView form(Produtos produtos) {

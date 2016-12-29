@@ -24,13 +24,13 @@ public class UsuarioDAO implements UserDetailsService{
 	public UserDetails loadUserByUsername(String email) {
 		
 		System.out.println(email);
-        List<Usuario> usuarios = manager.createQuery("select p from Usuario p", Usuario.class)
-        		.getResultList();
+        List<Usuario> usuarios = manager.createQuery("select u from Usuario as u where u.email = :email", Usuario.class)
+        		.setParameter("email", email).getResultList();
 
-       if (usuarios.contains(email)) {
-            throw new UsernameNotFoundException("O usu·rio " + email + " n„o foi encontrado");
+       if (usuarios.isEmpty()) {
+            throw new UsernameNotFoundException("O usu√°rio " + email + " n√£o foi encontrado");
        }else{
-    	   System.out.println("ValidaÁ„o efetuada com SUCESSO");
+    	   System.out.println("Valida√ß√£o efetuada com SUCESSO");
        }
         System.out.println(usuarios);
         return usuarios.get(0);

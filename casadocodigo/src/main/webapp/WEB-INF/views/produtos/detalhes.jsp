@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="${s:mvcUrl('HC#index').build()}">Casa do Código</a>
+		      <a class="navbar-brand" href="${s:mvcUrl('IC#index').build()}">Casa do Código</a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
@@ -52,7 +53,7 @@
 				  
 			
 			   
-			  <form action='<c:url value="/carrinho/add" />' method="post">
+			  <form:form servletRelativeAction="/carrinho/add" method="post" cssClass="container">
 			    <input type="hidden" name="produtoId" value="${produtos.id}" />
 			    
 			    <ul class="list-inline">
@@ -67,7 +68,7 @@
 			     </c:forEach>         
 			    </ul>
 			    <button type="submit" title="Compre Agora ${produtos.titulo}">Compre Agora </button>
-			  </form>
+			  </form:form>
 	  	</div>
 	  
 	  

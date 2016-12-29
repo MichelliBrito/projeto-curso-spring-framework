@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
 	
 </head>
-</head>
+
 <body>
 
 		<nav class="navbar navbar-inverse">
@@ -26,7 +26,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="${s:mvcUrl('HC#index').build()}">Casa do Código</a>
+		      <a class="navbar-brand" href="${s:mvcUrl('IC#index').build()}">Casa do Código</a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">

@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,9 +45,9 @@
     <tr>
         <td>Total: R$ ${carrinhoCompras.total}</td>
         </br>
-        <form action="/casadocodigo/pagamento/finalizar" method="post">
+        <form:form servletRelativeAction="/casadocodigo/pagamento/finalizar" method="post">
     		<input type="submit" class="checkout" name="checkout" value="Finalizar compra" />
-		</form>
+		</form:form>
     </tr>
 	</tfoot>
 
